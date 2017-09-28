@@ -39,17 +39,17 @@
 
 #pragma mark -URL
 
-- (NSString *)BaseURL
+- (NSString *)BaseURL_
 {
     return _useProductionServer?_baseURL:_testBaseURL;
 }
 
-- (NSString *)CDNURL
+- (NSString *)CDNURL_
 {
     return _useProductionServer?_CDNURL:_testCDNURL;
 }
 
-- (NSString *)ExtraURL
+- (NSString *)ExtraURL_
 {
     return _useProductionServer?_extraURL:_testExtraURL;
 }
@@ -67,16 +67,16 @@
 
 - (NSString *)baseURLWithPath:(NSString *)path
 {
-    return [self domaine:self.BaseURL path:path];
+    return [self domaine:self.BaseURL_ path:path];
 }
 
 - (NSString *)CDNURLWithPath:(NSString *)path
 {
-    return [self domaine:self.CDNURL path:path];
+    return [self domaine:self.CDNURL_ path:path];
 }
 
 - (NSString *)extraURLWithPath:(NSString *)path
 {
-    return [self domaine:self.ExtraURL path:path];
+    return [self domaine:self.ExtraURL_ path:path];
 }
 @end

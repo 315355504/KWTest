@@ -20,7 +20,7 @@
 
 
 /**
- 讲字符串转化成字典
+ 将字符串转化成字典
 
  @param jsonString 字符串
  @return 字典
