@@ -9,7 +9,11 @@
 #import "ViewController.h"
 #import "KWAppError.h"
 #import "CDStatusBarViewController.h"
-@interface ViewController ()
+
+#import "KWShareView.h"
+#import "KWShareManage.h"
+#import "QRCodeView.h"
+@interface ViewController ()<KWShareViewDelegate>
 {
     NSDictionary * dic;
 }
@@ -42,15 +46,61 @@ static void extracted(ViewController *object) {
 
 - (IBAction)touch:(UIButton *)sender {
     
-    CDStatusBarViewController * vc = [[CDStatusBarViewController alloc]init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
+    [self shareWayViewDoShare];
   
    
     
 }
+-(void)shareWayViewDoShare
+{
+//    if (_shareInfoModel == nil) {
+//        return;
+//    }
+        NSMutableArray *shareViewArray = [NSMutableArray array];
+//    for (NSDictionary *dic in _shareArray) {
+        ShareViewItem *item = [[ShareViewItem alloc] init];
+        item.title = @"微信好友";
+        item.image = [UIImage imageNamed:@"WechatIMG6.jpeg"];
+        [shareViewArray addObject:item];
+//    }
+    
+    KWShareView *shareView = [[KWShareView alloc] init];
+    shareView.KWShareViewDelegate = self;
+    [shareView showKWShareViewWith:shareViewArray];
+}
+-(void)shareViewDidSelectItemWith:(NSIndexPath *)indexPath withTitle:(NSString *)title
+{
+    NSLog(@"111111111-->%@%@",title,indexPath);
 
+    /*
+    _shareContent = @{@"shareBtnTitle":@"分享",
+                      @"share_title":_shareInfoModel.title,
+                      @"share_body":_shareInfoModel.remark,
+                      @"share_logo":_shareInfoModel.inviteLogo,
+                      @"share_url":[[KWAppServiceConfig sharedInstance] baseURLWithPath:_shareInfoModel.url]};
+    */
+    
+    NSDictionary * shareContent = [NSDictionary dictionary];
+    
+    if ([title isEqualToString:@"微信好友"]) {
+        
+        [[KWShareManage sharedInstance] shareButtonActionWithSharetype:wx withContentDic:shareContent];
+    }else if ([title isEqualToString:@"微信朋友圈"]){
+        
+        [[KWShareManage sharedInstance] shareButtonActionWithSharetype:wechatf withContentDic:shareContent];
+    }else if ([title isEqualToString:@"QQ好友"]){
+        
+        [[KWShareManage sharedInstance] shareButtonActionWithSharetype:qq withContentDic:shareContent];
+    }else if ([title isEqualToString:@"QQ空间"]){
+        
+        [[KWShareManage sharedInstance] shareButtonActionWithSharetype:qqzone withContentDic:shareContent];
+    }else if ([title isEqualToString:@"二维码"]){
+        
+        QRCodeView *view = [[QRCodeView alloc]init];
+        [view showQRCodeViewWithUrl:[[KWAppServiceConfig sharedInstance] baseURLWithPath:@"_shareInfoModel.url"]];
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
