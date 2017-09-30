@@ -86,7 +86,7 @@
     }
     //创建KWAppError对象
     __block KWAppError *appError;
- 
+
     //请求网络
     [[KWAppServiceAgent shareService] appDataTaskWithHTTPMethod:method URLString:URL parameters:parameters headerParamters:headerParameters success:^(NSURLSessionDataTask *task, id responseObject) {
         //成功处理

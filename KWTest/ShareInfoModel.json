@@ -1,0 +1,7 @@
+{
+    "inviteLogo" : "http://api.xianjiavip.com/readFile.htm?path=/usr/local/apache-tomcat-7.0.63/webapps/ROOT//static/images/invite_logo.png",
+    "rate" : "20.0%",
+    "remark" : "啊 啊 啊 牡 牡丹",
+    "title" : "Title",
+    "url" : "/h5/register/register.jsp?invitationCode=jId48a"
+}

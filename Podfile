@@ -14,4 +14,5 @@ pod 'SDWebImage', '~> 4.1.0'
 
 pod 'MJRefresh', '~> 3.1.12'
 pod 'SVProgressHUD', '~> 2.2.1'
+pod 'MJExtension', '~> 3.0.13'
 end

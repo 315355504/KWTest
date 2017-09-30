@@ -107,6 +107,7 @@
 		6E91E5B31F7CA88900683654 /* KWAppSkinColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91E5691F7CA88900683654 /* KWAppSkinColor.m */; };
 		6E91E5B41F7CA88900683654 /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91E56C1F7CA88900683654 /* DataBaseManager.m */; };
 		6E91E5B51F7CA88900683654 /* KWAppUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E91E56E1F7CA88900683654 /* KWAppUserProfile.m */; };
+		6EEA9D461F7F92D300C5C77D /* ShareInfoModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA9D451F7F92D300C5C77D /* ShareInfoModel.json */; };
 		758E811ED0B383EF7C118861 /* Pods_KWTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D37B1A228A8B573D65E6F3B /* Pods_KWTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -332,6 +333,7 @@
 		6E91E56C1F7CA88900683654 /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseManager.m; sourceTree = "<group>"; };
 		6E91E56D1F7CA88900683654 /* KWAppUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWAppUserProfile.h; sourceTree = "<group>"; };
 		6E91E56E1F7CA88900683654 /* KWAppUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWAppUserProfile.m; sourceTree = "<group>"; };
+		6EEA9D451F7F92D300C5C77D /* ShareInfoModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShareInfoModel.json; sourceTree = "<group>"; };
 		D4DCC2E51EA2B4CF46351E7F /* Pods-KWTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KWTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KWTest/Pods-KWTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -492,6 +494,7 @@
 				6E91E4921F7CA86500683654 /* ViewController.h */,
 				6E91E4931F7CA86500683654 /* ViewController.m */,
 				6E715ED61F7F6585001448B8 /* WechatIMG6.jpeg */,
+				6EEA9D451F7F92D300C5C77D /* ShareInfoModel.json */,
 				6E91E4951F7CA86500683654 /* Main.storyboard */,
 				6E91E4981F7CA86500683654 /* Assets.xcassets */,
 				6E91E49A1F7CA86500683654 /* LaunchScreen.storyboard */,
@@ -994,6 +997,7 @@
 				6E715ECA1F7F4B5C001448B8 /* README.md in Resources */,
 				6E91E49C1F7CA86500683654 /* LaunchScreen.storyboard in Resources */,
 				6E715ED71F7F6586001448B8 /* WechatIMG6.jpeg in Resources */,
+				6EEA9D461F7F92D300C5C77D /* ShareInfoModel.json in Resources */,
 				6E91E5A91F7CA88900683654 /* WKPostJS.html in Resources */,
 				6E91E4991F7CA86500683654 /* Assets.xcassets in Resources */,
 				6E91E4971F7CA86500683654 /* Main.storyboard in Resources */,
@@ -1029,6 +1033,7 @@
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/HHRouter/HHRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
@@ -1043,6 +1048,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HHRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
