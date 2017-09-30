@@ -101,7 +101,7 @@ static void extracted(ViewController *object) {
     }else if ([title isEqualToString:@"二维码"]){
         
         QRCodeView *view = [[QRCodeView alloc]init];
-        [view showQRCodeViewWithUrl:[[KWAppServiceConfig sharedInstance] baseURLWithPath:@"_shareInfoModel.url"]];
+        [view showQRCodeViewWithUrl:_shareInfoModel.url];
     }
 }
 -(void)requestShareUre
